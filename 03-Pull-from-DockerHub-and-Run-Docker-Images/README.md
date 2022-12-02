@@ -42,9 +42,9 @@ kalyanreddy@Kalyans-Mac-mini-2 ~ %
 
 ## Step-4: List Running Containers
 ```
-docker ps
-docker ps -a
-docker ps -a -q
+docker ps            # lista os container ativos
+docker ps -a         # lista os container parados
+docker ps -a -q      # lista os IDs dos container 
 ```
 
 ## Step-5: Connect to Container Terminal
