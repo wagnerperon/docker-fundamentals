@@ -9,7 +9,7 @@
 ## Step-1: Run the base Nginx container
 - Access the URL http://localhost
 ```
-docker run --name mynginxdefault -p 80:80 -d nginx
+docker run --name mynginxdefault -p 80:80 -d nginx    ## Neste ponto irã baixar e criar um container do nginx
 docker ps
 docker stop mynginxdefault
 ```
@@ -29,6 +29,10 @@ docker run --name mynginx1 -p 80:80 -d stacksimplify/mynginx_image1:v1
 Replace your docker hub account Id
 docker build -t <your-docker-hub-id>/mynginx_image1:v1 .
 docker run --name mynginx1 -p 80:80 -d <your-docker-hub-id>/mynginx_image1:v1
+```
+
+```
+docker rm $(docker ps -a -q)
 ```
 
 ## Step-4: Tag & push the Docker image to docker hub
